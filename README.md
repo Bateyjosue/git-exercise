@@ -20,6 +20,51 @@ hint: 	git branch -m <name>
 Initialized empty Git repository in /home/josuebatey/Documents/TheGym/Git/Excercise/bundle-exercise/.git/
 ➜  bundle-exercise git:(master) git branch -M main
 ➜  bundle-exercise git:(main) touch README.md
-
+➜  bundle-exercise git:(main) ✗ git add .
+➜  bundle-exercise git:(main) ✗ git commit -m "Add README.md file"
+[main (root-commit) 5193683] Add README.md file
+ 1 file changed, 25 insertions(+)
+ create mode 100644 README.md
+➜  bundle-exercise git:(main) git remote add origin https://github.com/Bateyjosue/git-exercise.git
+➜  bundle-exercise git:(main) git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 653 bytes | 653.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+➜  bundle-exercise git:(main) 
+➜  bundle-exercise git:(main) git checkout -b dev
+Switched to a new branch 'dev'
+➜  bundle-exercise git:(dev) ✗ git push -u origin dev 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/dev
+remote: 
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      dev -> dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+➜  bundle-exercise git:(dev) ✗ git checkout -b test
+Switched to a new branch 'test'
+➜  bundle-exercise git:(test) ✗ git push -u origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/test
+remote: 
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      test -> test
+Branch 'test' set up to track remote branch 'test' from 'origin'.
+➜  bundle-exercise git:(test) ✗ git switch dev 
+M       README.md
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+➜  bundle-exercise git:(dev) ✗ git push -u origin --delete test
+To https://github.com/Bateyjosue/git-exercise.git
+ - [deleted]         test
 
 ```
