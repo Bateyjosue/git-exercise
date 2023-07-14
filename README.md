@@ -83,4 +83,26 @@ Saved working directory and index state WIP on dev: ab016c2 Bundle 1 | Exercise 
 ➜  bundle-exercise git:(dev) ✗ git add about.html 
 ➜  bundle-exercise git:(dev) ✗ git stash save "About"
 Saved working directory and index state On dev: About
+➜  bundle-exercise git:(dev) touch team.html
+➜  bundle-exercise git:(dev) ✗ code team.html 
+➜  bundle-exercise git:(dev) ✗ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  bundle-exercise git:(dev) ✗ git add .
+➜  bundle-exercise git:(dev) ✗ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+➜  bundle-exercise git:(dev) ✗ git stash save "Team"
+Saved working directory and index state On dev: Team
 ```
