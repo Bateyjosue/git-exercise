@@ -66,5 +66,19 @@ Your branch is up to date with 'origin/dev'.
 ➜  bundle-exercise git:(dev) ✗ git push -u origin --delete test
 To https://github.com/Bateyjosue/git-exercise.git
  - [deleted]         test
+ ➜  bundle-exercise git:(dev) touch home.html && code home.html
+➜  bundle-exercise git:(dev) ✗ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  bundle-exercise git:(dev) ✗ git add .
+➜  bundle-exercise git:(dev) ✗ git stash
+Saved working directory and index state WIP on dev: ab016c2 Bundle 1 | Exercise 1
+➜  bundle-exercise git:(dev) git stash list
 
 ```
