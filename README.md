@@ -178,3 +178,46 @@ Changes not staged for commit:
 HEAD is now at 6e41833 Design the Bottom Section
 ➜  bundle-exercise git:(dev) ✗ 
 ```
+
+## Bundle 2
+### Exercise 1
+
+```bash
+bundle-exercise git:(dev) git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+➜  bundle-exercise git:(ft/bundle-2) touch services.html && code services.html
+➜  bundle-exercise git:(ft/bundle-2) ✗ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  bundle-exercise git:(ft/bundle-2) ✗ git add .
+➜  bundle-exercise git:(ft/bundle-2) ✗ git commit -m "Add File services.html"
+[ft/bundle-2 582629d] Add File services.html
+ 1 file changed, 21 insertions(+)
+ create mode 100644 services.html
+➜  bundle-exercise git:(ft/bundle-2) git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+➜  bundle-exercise git:(ft/bundle-2) git push -u origin ft/bundle-2 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 548 bytes | 548.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/bundle-2
+remote: 
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
+➜  bundle-exercise git:(ft/bundle-2) 
+```
