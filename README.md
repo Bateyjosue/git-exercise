@@ -66,7 +66,11 @@ Your branch is up to date with 'origin/dev'.
 ➜  bundle-exercise git:(dev) ✗ git push -u origin --delete test
 To https://github.com/Bateyjosue/git-exercise.git
  - [deleted]         test
- ➜  bundle-exercise git:(dev) touch home.html && code home.html
+```
+
+### Exercise 1
+```bash
+➜  bundle-exercise git:(dev) touch home.html && code home.html
 ➜  bundle-exercise git:(dev) ✗ git status
 On branch dev
 Your branch is up to date with 'origin/dev'.
@@ -76,6 +80,7 @@ Untracked files:
         home.html
 
 nothing added to commit but untracked files present (use "git add" to track)
+
 ➜  bundle-exercise git:(dev) ✗ git add .
 ➜  bundle-exercise git:(dev) ✗ git stash
 Saved working directory and index state WIP on dev: ab016c2 Bundle 1 | Exercise 1
@@ -105,4 +110,71 @@ Changes to be committed:
 
 ➜  bundle-exercise git:(dev) ✗ git stash save "Team"
 Saved working directory and index state On dev: Team
+
+➜  bundle-exercise git:(dev) ✗ git stash list
+➜  bundle-exercise git:(dev) ✗ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{1} (9ef7b6742d23efdf967bfe42a2a3127c2cd99f45)
+➜  bundle-exercise git:(dev) ✗ git stash list
+➜  bundle-exercise git:(dev) ✗ git stash pop stash@{1}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{1} (9ef7b6742d23efdf967bfe42a2a3127c2cd99f45)
+➜  bundle-exercise git:(dev) ✗ git add .
+➜  bundle-exercise git:(dev) ✗ git commit -m "Restore Files about.html and home.html"
+➜  bundle-exercise git:(dev) ✗ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 653 bytes | 653.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      main -> dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+➜  bundle-exercise git:(dev) ✗ git stash pop
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped refs/stash@{0} (8a75b0b6f8f9fe620053a24afb56b4cd3936d57e)
+➜  bundle-exercise git:(dev) ✗ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+➜  bundle-exercise git:(dev) ✗ git reset --hard
+HEAD is now at 6e41833 Design the Bottom Section
+➜  bundle-exercise git:(dev) ✗ 
 ```
