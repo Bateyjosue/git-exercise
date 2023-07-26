@@ -319,3 +319,186 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Bateyjosue/git-exercise.git
    ddb53dd..dc463c8  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+### Exercise 1
+
+```bash
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)  
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page)
+$ touch team.html && code team.html
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page)
+$ git add team.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page)
+$ git commit -m "Add layout for team page"
+[ft/team-page 4e972b9] Add layout for team page
+ 1 file changed, 24 insertions(+)
+ create mode 100644 team.html
+ GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page) 
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 569 bytes | 569.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.     
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:  
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/team-page                                                                     page
+remote:
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page) 
+$ git switch main
+Switched to branch 'main'
+M       README.md
+Your branch is up to date with 'origin/main'.
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git switch ft/team-page 
+Switched to branch 'ft/team-page'
+M       README.md
+Your branch is up to date with 'origin/ft/team-page'.
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page) 
+$ git log
+commit 4e972b90726bb81814361317cd9475125dc20715 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Bateyjosue <josuebatey19@gmail.com>
+Date:   Wed Jul 26 11:12:17 2023 +0200
+
+    Add layout for team page
+
+commit 1f2b7a2f3a169c1620e6732332c4fe8c136a5cec (origin/main, origin/HEAD)
+Author: Bateyjosue <josuebatey19@gmail.com>
+Date:   Wed Jul 26 11:01:20 2023 +0200
+
+    Solve Bundle2 #Exercise2
+
+commit bff0c5553029e02ebabce62d7988710081adea5e
+Author: Bateyjosue <josuebatey19@gmail.com>
+Date:   Tue Jul 25 11:54:05 2023 +0200
+
+    Bundle 2 #Exercise 2
+
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/team-page)
+$ git switch ft/contact-page
+Switched to branch 'ft/contact-page'
+M       README.md
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git cherry-pick 4e972b90726bb81814361317cd9475125dc2071
+[ft/contact-page 8ea6673] Add layout for team page
+ Date: Wed Jul 26 11:12:17 2023 +0200
+ 1 file changed, 24 insertions(+)
+ create mode 100644 team.html
+ GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ touch contact.html && contact.html
+bash: contact.html: command not found
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ touch contact.html && code contact.html
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git add contact.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git commit -m "Add contact Page and Layout "
+[ft/contact-page b4612da] Add contact Page and Layout
+ 1 file changed, 25 insertions(+)
+ create mode 100644 contact.html
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git push -u origin ft/contact-page 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.    
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 855 bytes | 427.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/contact-page     
+remote:
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ touch faq.html && code faq.html
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git add faq.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git commit -m 'Add faq page and layout'
+[ft/faq-page e81782d] Add faq page and layout
+ 1 file changed, 26 insertions(+)
+ create mode 100644 faq.html
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 580 bytes | 580.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/faq-page
+remote:
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git revert 4e972b90726bb81814361317cd9475125dc2071
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: Finished.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git commit -m "Revert changes from team"
+[ft/faq-page 9ecd6e2] Revert changes from team
+ 1 file changed, 24 deletions(-)
+ delete mode 100644 team.html
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 230 bytes | 230.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Bateyjosue/git-exercise.git
+   e81782d..9ecd6e2  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+```
