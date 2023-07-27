@@ -502,3 +502,12 @@ To https://github.com/Bateyjosue/git-exercise.git
    e81782d..9ecd6e2  ft/faq-page -> ft/faq-page
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 ```
+
+### Exercise 2
+
+```bash
+PS C:\Users\GIS\Documents\theGym\Git\git-exercise> git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\GIS\Documents\theGym\Git\git-exercise> 
+
+```
