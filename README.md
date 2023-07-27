@@ -509,5 +509,18 @@ branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 PS C:\Users\GIS\Documents\theGym\Git\git-exercise> git checkout -b ft/home-page-redesign
 Switched to a new branch 'ft/home-page-redesign'
 PS C:\Users\GIS\Documents\theGym\Git\git-exercise> 
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git add .
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git commit -m 'Update readme file'
+[main 4c018cb] Update readme file
+ 1 file changed, 9 insertions(+) 
 
 ```
