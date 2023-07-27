@@ -576,3 +576,81 @@ To https://github.com/Bateyjosue/git-exercise.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.                                           
 ```
+
+## Bundle 4
+### Exercise 1
+
+```bash
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git switch main 
+Switched to branch 'main'
+M       README.md
+Your branch is up to date with 'origin/main'.
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git status
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git remote -v
+origin  https://github.com/Bateyjosue/git-exercise.git (fetch)
+origin  https://github.com/Bateyjosue/git-exercise.git (push)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git remote add git-copy https://github.com/Bateyjosue/git-exercise-copy.git
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git remote -v
+git-copy        https://github.com/Bateyjosue/git-exercise-copy.git (fetch)  
+git-copy        https://github.com/Bateyjosue/git-exercise-copy.git (push)   
+origin  https://github.com/Bateyjosue/git-exercise.git (fetch)
+origin  https://github.com/Bateyjosue/git-exercise.git (push)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git add .
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git commit -m "Add the link to the faq page"
+[main a4210ed] Add the link to the faq page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git remote set-url --add --push origin https://github.com/Bateyjosue/git-exercise.git
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git remote set-url --add --push origin https://github.com/Bateyjosue/git-exercise-copy.git
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To https://github.com/Bateyjosue/git-exercise.git
+   1d80f2e..a4210ed  main -> main
+branch 'main' set up to track 'origin/main'.
+Enumerating objects: 56, done.
+Counting objects: 100% (56/56), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (43/43), done.
+Writing objects: 100% (56/56), 11.63 KiB | 1.66 MiB/s, done.
+Total 56 (delta 22), reused 25 (delta 9), pack-reused 0
+remote: Resolving deltas: 100% (22/22), done.
+To https://github.com/Bateyjosue/git-exercise-copy.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
