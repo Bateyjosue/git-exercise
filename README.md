@@ -522,5 +522,57 @@ GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
 $ git commit -m 'Update readme file'
 [main 4c018cb] Update readme file
  1 file changed, 9 insertions(+) 
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.44 KiB | 625.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/Bateyjosue/git-exercise.git
+   1f2b7a2..766b8fd  main -> main
 
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git switch ft/home-page-redesign 
+Switched to branch 'ft/home-page-redesign'
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git add home.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git commit -m "Add main content to home page"
+[ft/home-page-redesign 889b9a8] Add main content to home page
+ 1 file changed, 4 insertions(+)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/home-page-redesign)                                                                         ig
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.71 KiB | 583.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:                                                                          ng
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/home-page-redesign                                                                    -r
+remote:
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.                                           
 ```
