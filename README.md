@@ -654,3 +654,147 @@ To https://github.com/Bateyjosue/git-exercise-copy.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+
+### Exercise 2
+
+```bash
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git checkout -m ft/footer
+error: pathspec 'ft/footer' did not match any file(s) known to git
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ code home.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git statuts
+git: 'statuts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git add home.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git commit -m "Add Footer Layou in home page"
+[ft/footer 9aa42d0] Add Footer Layou in home page
+ 1 file changed, 7 insertions(+)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ code about.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)        
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git add about.html 
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git commit -m "Design Footer Layout"
+[ft/footer bf68ecc] Design Footer Layout
+ 1 file changed, 7 insertions(+)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git status
+On branch ft/footer
+nothing to commit, working tree clean
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git push -u origin ft/footer 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 748 bytes | 374.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise/pull/new/ft/footer
+remote:
+To https://github.com/Bateyjosue/git-exercise.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 748 bytes | 249.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Bateyjosue/git-exercise-copy/pull/new/ft/foote
+remote:
+To https://github.com/Bateyjosue/git-exercise-copy.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/footer)
+$ git switch main 
+Switched to branch 'main'
+M       README.md
+Your branch is up to date with 'origin/main'.
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating 541d21d..bf68ecc
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 7 +++++++
+ home.html  | 7 +++++++
+ 2 files changed, 14 insertions(+)
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   home.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/squashing)
+$ git commit -m "Footer changes squashing"
+[ft/squashing 4877ef3] Footer changes squashing
+ 2 files changed, 14 insertions(+)zz
+```
