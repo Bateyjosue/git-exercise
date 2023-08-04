@@ -796,5 +796,5 @@ Changes not staged for commit:
 GIS@mgrosz-lt MINGW64 ~/Documents/theGym/Git/git-exercise (ft/squashing)
 $ git commit -m "Footer changes squashing"
 [ft/squashing 4877ef3] Footer changes squashing
- 2 files changed, 14 insertions(+)
+ 2 files changed, 14 insertions(+)zz
 ```
